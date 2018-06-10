@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import Header from './Components/Header/Header'
-import MobileH from './Components/MobileH/MobileH'
-import Footer from './Components/Footer/Footer'
-import Chart from './Components/Chart'
-import PieChart from './Components/PieChart'
+import Header from './Components/Header/Header';
+import MobileH from './Components/MobileH/MobileH';
+import Footer from './Components/Footer/Footer';
+import Chart from './Components/Chart';
+import PieChart from './Components/PieChart';
+import ModuleOne from './Components/ModuleOne';
+import Slider from './Components/Slider';
+import Jumbotron from './Components/Jumbotron';
+
 import './styles/foundation.min.css';
+import 'purecss/build/pure.css';
+
 import './App.css';
 
 class App extends Component {
@@ -62,18 +68,18 @@ class App extends Component {
     //Ajax calls here
     this.setState({
       piechartData:{
-        labels:['Barclays', 'China Construction Bank', 'ABC', 'Bank Of China', 'Mitsubishi UFJ Financial Group',
-        'JP Morgan Chase & Co.'],
+        labels:['Barclays', 'Halifax', 'HSBC', 'Llyods Bank', 'Natwest',
+        'RBS'],
         datasets:[
           {
             label:'Banque',
             data:[
-              3.47,
-              3.02,
-              2.82,
+              4.8,
+              4.2,
+              3.6,
               2.6,
-              2.59,
-              2.49
+              2.19,
+              1.9
             ],
             backgroundColor:[
               'rgba(225, 99, 139, 0.6)',
@@ -96,20 +102,28 @@ class App extends Component {
   render() {
     return (
       <div className="off-canvas-wrapper">
-      <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-        
-        <div className="off-canvas-content" data-off-canvas-content>
-        <MobileH />
-        <Header />
-        <hr/>
+        <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+          
+          <div className="off-canvas-content" data-off-canvas-content>
+            <Jumbotron title="Keep and Grow Your Money Safe" subtitle="Here to put our stuff" />
+            <Header />
+            <MobileH />
+            <div className="body-App">
+              <div className="ChartPart-App" >
+                <Chart chartData={this.state.chartData} location="World" />
+                
+                <ModuleOne title="Market Flash" subtitle="Take a look on our Success " />
 
-        <Chart chartData={this.state.chartData} location="World" />
-        <PieChart piechartData={this.state.piechartData} location="London" />
-        
-        <Footer />
+                <Slider />
+
+                <PieChart piechartData={this.state.piechartData} location="London" displayPosition="right"/>
+              </div>
+              
+            <Footer footerName="Joelle Maximin" />
+          </div>
         </div>
       </div>
-      </div>
+    </div>
     );
   }
 }

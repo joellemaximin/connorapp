@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Bar, Pie, Line} from 'react-chartjs-2';
+import {Pie} from 'react-chartjs-2';
 
 class PieChart extends Component{
     constructor(props){
@@ -34,7 +34,7 @@ class PieChart extends Component{
             options={{
                 title:{
                     display:this.props.displayTitle,
-                    text:'The Best Bank in '+ this.props.location,
+                    text:'The Best Bank Found in '+ this.props.location,
                     fontSize:25,
                 },
                 legend:{

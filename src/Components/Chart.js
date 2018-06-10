@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Bar, Pie, Line} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
 
 class Chart extends Component{
     constructor(props){
@@ -42,7 +42,7 @@ class Chart extends Component{
                     }
                 }}
             />
-
+    
             </div>
             
         );

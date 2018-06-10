@@ -4,9 +4,18 @@ import './Footer.css';
 class Footer extends Component {
   render() {
     return (
-      <div className="Footer">
-
+      
+      <div id="footer">
+        <div className="clearfix">
+          <ul>
+            <li>@copyright 2018</li>
+            <li href="">Sign In</li>
+            <li href="">Register</li>
+            <li>{this.props.footerName}</li>
+          </ul>
+        </div>
       </div>
+          
     );
   }
 }
