@@ -8,7 +8,7 @@ class Footer extends Component {
       <div id="footer">
         <div className="clearfix">
           <ul>
-            <li>@copyright 2018</li>
+            <li><p>&copy; Copyright 2018</p></li>
             <li href="">Sign In</li>
             <li href="">Register</li>
             <li>{this.props.footerName}</li>

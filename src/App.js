@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import Header from './Components/Header/Header';
 import MobileH from './Components/MobileH/MobileH';
 import Footer from './Components/Footer/Footer';
+
 import Chart from './Components/Chart';
 import PieChart from './Components/PieChart';
 import ModuleOne from './Components/ModuleOne';
 import Slider from './Components/Slider';
 import Jumbotron from './Components/Jumbotron';
+import Routes from './routes';
+
 
 import './styles/foundation.min.css';
 import 'purecss/build/pure.css';
-
 import './App.css';
 
 class App extends Component {
@@ -105,18 +107,22 @@ class App extends Component {
         <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper>
           
           <div className="off-canvas-content" data-off-canvas-content>
-            <Jumbotron title="Keep and Grow Your Money Safe" subtitle="Here to put our stuff" />
-            <Header />
-            <MobileH />
+
             <div className="body-App">
-              <div className="ChartPart-App" >
-                <Chart chartData={this.state.chartData} location="World" />
-                
-                <ModuleOne title="Market Flash" subtitle="Take a look on our Success " />
+              <Jumbotron  title="Keep and Grow Your Money Safe" subtitle="Here to put our stuff"/>
+              
+              <Header />
 
-                <Slider />
+              <MobileH />
+            <div className="ChartPart-App" >
+              <Chart chartData={this.state.chartData} location="World" />
+              
+              <ModuleOne title="Market Flash" subtitle="Take a look on our Success " />
 
-                <PieChart piechartData={this.state.piechartData} location="London" displayPosition="right"/>
+              <Slider />
+
+              <PieChart piechartData={this.state.piechartData} location="London" displayPosition="right"/>
+              <Routes />
               </div>
               
             <Footer footerName="Joelle Maximin" />

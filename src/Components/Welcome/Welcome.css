@@ -1,0 +1,23 @@
+
+.welcome{
+  padding: 30px 20px;
+  margin-bottom: 50px;
+}
+
+ul li .signup{
+  background-color: #95a5a6;
+  border-color:#95a5a6;
+  color: #fff;
+  padding: 10 25px;
+  margin-right: 55px;
+  
+}
+
+ul li .login{
+  background-color: #009fe3;
+  border-color:#009fe3;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10 25px;
+  margin-right: 35px;
+}
